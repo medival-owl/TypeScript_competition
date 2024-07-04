@@ -1,0 +1,20 @@
+# Node.js関連
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# TypeScript関連
+*.tsbuildinfo
+
+# 出力ディレクトリ
+dist/
+build/
+out/
+
+# VS Code関連
+.vscode/
+
+# テストカバレッジ
+coverage/
+# 環境設定ファイル
+.env
