@@ -1,2 +1,3 @@
 テスト
 まずはgit init 
+npm init -y
