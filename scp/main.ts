@@ -1,3 +1,3 @@
 
-let sss: number =33;
+let sss: number =330;
 console.log("sss=",sss);
