@@ -1,3 +1,4 @@
 
-let sss: number =330;
-console.log("sss=",sss);
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+  }
