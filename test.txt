@@ -37,3 +37,5 @@ dependencies
 dependencies
 
 プロジェクトが依存するライブラリやパッケージをリストします。本番環境で必要なものを指定します
+
+npx tsc --initでtsconfig.jsonを作成
