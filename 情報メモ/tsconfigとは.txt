@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es6",                 // コンパイル後のJavaScriptのバージョン
+    "module": "commonjs",            // モジュールシステム
+    "outDir": "./dist",              // コンパイル後のファイルの出力先
+    "rootDir": "./src",              // ソースコードのルートディレクトリ
+    "strict": true,                  // 厳格な型チェックオプション
+    "esModuleInterop": true,         // ESモジュールの互換性を向上させる
+    "skipLibCheck": true,            // 型定義ファイルのチェックをスキップ
+    "forceConsistentCasingInFileNames": true // ファイル名の大文字小文字の一貫性を強制
+  },
+  "include": [
+    "src/**/*"                        // コンパイル対象とするファイルやディレクトリ
+  ],
+  "exclude": [
+    "node_modules",                   // コンパイル対象から除外するディレクトリ
+    "dist"                            // 出力ディレクトリも除外
+  ]
+}
+tsconfig.jsonの詳細なフィールド説明
+compilerOptions: TypeScriptコンパイラに渡すオプションを指定します。
+
+target: コンパイル後のJavaScriptのバージョン（例：es5, es6）。
+module: モジュールシステム（例：commonjs, es6）。
+outDir: コンパイル後のJavaScriptファイルを出力するディレクトリ。
+rootDir: ソースファイルのルートディレクトリ。
+strict: 厳格な型チェックオプション（trueにすると様々な厳格モードが有効になります）。
+esModuleInterop: ESモジュールとCommonJSモジュールの互換性を向上させるオプション。
+skipLibCheck: 型定義ファイルのチェックをスキップしてコンパイル速度を向上させる。
+forceConsistentCasingInFileNames: ファイル名の大文字小文字の一貫性を強制するオプション。
+include: コンパイル対象とするファイルやディレクトリのパターンを指定します。
+
+exclude: コンパイル対象から除外するファイルやディレクトリのパターンを指定します。
