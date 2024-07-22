@@ -291,6 +291,65 @@ Webpack設定ファイルの作成: webpack.config.js
 開発サーバーの起動: npm start
 これで、TypeScriptとWebpackを使用した基本的なWebアプリケーションのセットアップが完了します。さらに複雑なアプリケーションでは、ReactやVue.jsなどのフレームワークを追加することもできます。
 
+、TypeScriptを使用してクッキーを保存するウェブサイトを作成できます。TypeScriptはJavaScriptの上位互換なので、JavaScriptで行えることは基本的にすべてTypeScriptでも行えます。以下は、TypeScriptでクッキーを保存、取得、および削除する基本的な方法です。
+
+クッキーを保存する
+typescript
+コードをコピーする
+function setCookie(name: string, value: string, days: number) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = `${name}=${value};${expires};path=/`;
+}
+クッキーを取得する
+typescript
+コードをコピーする
+function getCookie(name: string): string | null {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+クッキーを削除する
+typescript
+コードをコピーする
+function deleteCookie(name: string) {
+    document.cookie = `${name}=; Max-Age=-99999999;`;
+}
+使用例
+以下の例では、userというクッキーを設定し、取得し、削除するコードを示します。
+
+typescript
+コードをコピーする
+// クッキーを保存する
+setCookie('user', 'John Doe', 7);
+
+// クッキーを取得する
+const user = getCookie('user');
+if (user) {
+    console.log(`Hello, ${user}`);
+} else {
+    console.log('User not found');
+}
+
+// クッキーを削除する
+deleteCookie('user');
+注意点
+クッキーはブラウザに保存されるため、クライアントサイドのコードで管理されます。
+セキュリティやプライバシーの観点から、保存するデータには注意が必要です。
+クッキーの使用には、特にGDPRなどのプライバシー法に準拠する必要があります。
+TypeScriptを使用することで、より型安全で堅牢なコードを作成できます。クッキーの管理もTypeScriptの型定義によって明確に記述できます。
+
+
+
+
+
+
 
 
 
