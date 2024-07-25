@@ -17,3 +17,6 @@ HTMLの膨張: ユーティリティクラスを直接HTMLに書くため、HTML
 ンストール: Tailwind CSSはnpmを使用して簡単にインストールできます
 npm install tailwindcss
 npx tailwindcss init
+
+https://www.youtube.com/@user-hl9uv6cv7k/videos
+これ便利
