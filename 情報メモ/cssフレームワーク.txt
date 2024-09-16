@@ -63,3 +63,4 @@ https://www.youtube.com/@user-hl9uv6cv7k/videos
 セキュリティの午後が終わった
 システムアーキテクチャが終わった
 組み込みをやった
+組み込みをやった
