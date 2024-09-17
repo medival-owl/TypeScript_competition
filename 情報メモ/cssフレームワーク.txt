@@ -64,3 +64,4 @@ https://www.youtube.com/@user-hl9uv6cv7k/videos
 システムアーキテクチャが終わった
 組み込みをやった
 組み込みをやった
+組み込みをやった
